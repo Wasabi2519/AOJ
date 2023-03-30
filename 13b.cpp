@@ -1,14 +1,23 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
 int main() {
-    int x, i = 1;
-    while (true) {
-        cin >> x;
-        if (x == 0) break;
-        // breakはループを抜け出す
-        cout << "Case " << i << ": " << x << endl;
-        i++;
+  while (true) {
+    int x, y;
+    cin >> x >> y;
+    if (x == 0 && y == 0) {
+      break;
     }
-
+    
+    // xとyを小さい順に並べ替える
+    if (x > y) {
+      swap(x, y);
+    }
+    
+    // xとyを出力する
+    cout << x << " " << y << endl;
+  }
+  
+  // 終了
+  return 0;
 }
